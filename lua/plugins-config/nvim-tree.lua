@@ -9,8 +9,20 @@ nvim_tree.setup({
   sort_by = "case_sensitive",
 	-- 是否显示 git 状态
 	git = {
-		enable = true,
+    enable = true,
 	},
+      update_cwd = true,
+  update_focused_file = {
+    enable = true,
+    update_cwd = true,
+    update_root = false
+  },
+  actions = {
+      change_dir = {
+          enable = false
+      }
+  },
+
 	-- 过滤文件
 	filters = {
 		dotfiles = true, -- 过滤 dotfile
@@ -23,7 +35,7 @@ nvim_tree.setup({
 	number = false,
 	relativenumber = false,
 	signcolumn = "yes", -- 显示图标
-	width = 30,
+  width = 30,
   },
   renderer = {
     group_empty = true,
