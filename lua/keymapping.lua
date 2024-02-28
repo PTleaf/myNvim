@@ -30,7 +30,9 @@ map("n", "<M-l>", "<C-w>l", opt)
 
 -- telescope
 map("n", "<C-p>", ":Telescope find_files<CR>", opt);
-map("n", "<C-f>", ":Telescope live_grep<CR>", opt);
+--map("n", "<C-f>", ":Telescope live_grep<CR>", opt);
+map("n", "<C-f>", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", opt)
+
 
 -- monorepo
 vim.keymap.set("n", "<leader>m", function()
